@@ -1,0 +1,18 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Subject extends Model
+
+{
+	  protected $fillable = [
+        'code','description',
+    ];
+
+     public function cusub()
+    {
+    	return $this->belongsTo('App\CurriculumSubject');
+    }
+}
